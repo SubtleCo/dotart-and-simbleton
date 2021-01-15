@@ -1,4 +1,4 @@
 export const PurchaseAgent = (businessObj) => {
     return `
-    <h3 class="purchase-agent">${businessObj.nameFirst} ${businessObj.nameLast}`
+    <article class="agents">${businessObj.nameFirst} ${businessObj.nameLast}`
 }
