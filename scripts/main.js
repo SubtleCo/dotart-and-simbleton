@@ -1,4 +1,6 @@
 import { BusinessList } from './BusinessList.js'
+import { PurchaseAgentList } from './PurchaseAgentList.js'
 
-BusinessList();
+// BusinessList();
+PurchaseAgentList();
 console.log("hi!")
