@@ -6,8 +6,8 @@ const contentTarget = document.querySelector(".container");
 export const BusinessList = () => {
     const businessArray = UseBusinesses();
     let businessHTML = "";
-    for (const business of businessArray) {
+    businessArray.forEach(business => {
         businessHTML += Business(business);
-    }
+    });
     contentTarget.innerHTML += businessHTML;
 }
