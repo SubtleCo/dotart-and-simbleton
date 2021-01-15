@@ -1,4 +1,5 @@
 import { BusinessList } from './BusinessList.js'
 
-BusinessList();
+BusinessList("addressStateCode", "NY");
+BusinessList("companyIndustry", "Manufacturing");
 console.log("hi!")
