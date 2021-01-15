@@ -13,5 +13,6 @@ export const PurchaseAgentList = () =>{
     })
 
 
-    contentTarget.innerHTML += agentHTML;
+    contentTarget.innerHTML += `<h2 class="purchase-agent-title">Purchasing Agents </h2> 
+                                ${agentHTML}`;
 }
