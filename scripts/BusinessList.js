@@ -29,7 +29,7 @@ export const BusinessList = (filter=undefined, filterValue) => {
     contentTarget.innerHTML += businessHTML;
 
 
-    // Search functionality
+    // Search functionality, companies
 
     const companySearchResultArticle = document.querySelector(".foundCompanies");
 
