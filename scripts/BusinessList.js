@@ -1,7 +1,7 @@
 import { UseBusinesses } from "./BusinessProvider.js";
 import { Business } from "./Business.js";
 
-const contentTarget = document.querySelector(".container");
+const contentTarget = document.querySelector(".allCompanies");
 
 
 // BusinessList() with no parameters will list all business
@@ -27,4 +27,34 @@ export const BusinessList = (filter=undefined, filterValue) => {
     }
 
     contentTarget.innerHTML += businessHTML;
+
+
+    // Search functionality
+
+    const companySearchResultArticle = document.querySelector(".foundCompanies");
+
+    document
+        .querySelector("#companySearch")
+        .addEventListener("keypress", keyPressEvent => {
+                if (keyPressEvent.charCode === 13) {
+                    const foundBusiness = [];
+                    const searchKey = keyPressEvent.target.value.toLowerCase();
+
+                    if (searchKey === "") {
+                        companySearchResultArticle.innerHTML = "";
+                        return BusinessList();
+                    }
+
+                    foundBusiness.push(businessArray.find(business => {
+                        return business.companyName.toLowerCase().includes(searchKey)
+                    }))
+                    console.log(foundBusiness);
+                    let foundBusinessHTML = "";
+                    foundBusiness.forEach(business => {
+                        foundBusinessHTML += Business(business);
+                    });
+                    contentTarget.innerHTML = "";
+                    companySearchResultArticle.innerHTML = foundBusinessHTML;
+                }
+        })
 }
