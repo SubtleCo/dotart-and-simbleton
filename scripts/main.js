@@ -8,5 +8,4 @@ import { PurchaseAgentList } from './PurchaseAgentList.js'
 // No filter
 BusinessList();
 
-// PurchaseAgentList();
-console.log("hi!")
+PurchaseAgentList();
